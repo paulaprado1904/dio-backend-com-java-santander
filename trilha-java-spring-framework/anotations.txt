@@ -1,0 +1,42 @@
+Spring Framework
+
+
+É um framework opensource, baseado nos padrões de projetos, inversão de controle e injeção de dependência.
+
+INVERSÃO DE CONTROLE
+
+Trata-se do redirecionamento do fluxo de execução de um código retirando parcialmente o controle sobre ele e delegando-o para um container. O principal propósito é minimizar o acoplamento do código.
+
+INJEÇÃO DE DEPENDÊNCIAS
+
+É uma padrão de desenvolvimento com a finalidade de manter baixo o nível de acoplamento entre módulos de um sistema.
+
+
+BEANS
+
+Objeto que é instanciado(criado), montado e gerenciado por um container atráves do princípio da inversão de controle.
+
+SCOPES
+
+	SINGLETON
+		O container do Spring IoC define apenas uma instância do objeto.
+
+	PROTOTYPE
+		Será criado um novo objeto a cada solicitação ao container.
+
+	HTTP - Request
+		Um bean será criado para cada requisição HTTP. Objetos existirão enquanto a requisição estiver em execução.
+
+	HTTP - Session
+		Um bean será criado para cada sessão de usuário. Precisamos acessar a mesma solicitação duas vezes para testar os escopos específicos da web.
+
+	HTTTP - Global
+		Ou Application Scope cria um bean para o ciclo de vida do contexto da aplicação. Objetos compartilhados por toda a aplicação.
+
+	AUTOWIRED
+		Uma anotação (indicação) onde deverá ocorrer uma injeção automática de dependência.
+			byName: É buscado um método set que corresponde ao nome do Bean.
+			byType: É considerado o tipo da classe para inclusão do Bean.
+			byConstrutor: Usamos um construtor para incluir a dependência.
+
+  
